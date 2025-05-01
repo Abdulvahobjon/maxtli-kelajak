@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baxtli Kelinchak - Online Marafon</title>
+    <meta
+      name="description"
+      content="Zamonaviy qizlar uchun online marafon - kelinlik hayotiga tayyorlanish"
+    />
+    <style>
+      /* Inline critical CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+      .hero-container {
+        max-width: 540px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: black;
+        background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==); /* Placeholder until real BG loads */
+        background-size: cover;
+        padding-top: 17px;
+      }
+      .hero-top {
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 14px 22px 23px;
+        background-color: rgba(0, 0, 0, 0.55);
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .hero-top-logo {
+        width: 72px;
+        height: auto;
+        margin-bottom: 14px;
+      }
+      .hero-top-logo > img{
+        width: 100%;
+        object-fit: cover;
+      }
+      .hero-info {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-bottom: 19px;
+      }
+      .hero-info > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .hero-info-text {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: white;
+        opacity: 0.7;
+      }
+      .hero-info-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+      }
+      .hero-top-center-logo {
+        width: 211px;
+        height: auto;
+        margin-bottom: 17px;
+      }
+      .hero-bottom-text {
+        font-size: 13px;
+        font-weight: 400;
+        text-align: center;
+        max-width: 373px;
+        line-height: 20px;
+        color: white;
+      }
+      .hero-bottom {
+        width: 100%;
+        position: relative;
+      }
+      .btn-signUp {
+        display: flex;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        background: linear-gradient(
+          90deg,
+          #ffe9c8 0%,
+          #ffd9ad 21%,
+          #ffddb5 51%,
+          #ffddb5 73%,
+          #ffcc8f 100%
+        );
+        padding: 17px 49px;
+        font-size: 19px;
+        color: #9d641e;
+        font-weight: 600;
+        line-height: 1.55;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 14px;
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+      }
+      .iconTimer {
+        width: 17px;
+        height: 17px;
+      }
+    </style>
+    <!-- Deferred non-critical CSS -->
+    <link
+      rel="preload"
+      href="./css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="./css/style.css" /></noscript>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-top">
+          <img
+            src="./images/logo.png"
+            class="hero-top-logo"
+            alt="Mashriq Mash'ali logo"
+            width="61"
+            height="61"
+            loading="eager"
+          />
+          <div class="hero-info">
+            <div>
+              <img
+                src="./images/iconTimer.svg"
+                class="iconTimer"
+                alt="Taymer"
+                width="17"
+                height="17"
+              />
+              <div>
+                <p class="hero-info-text">Marafon kunlari:</p>
+                <div class="hero-info-title">5-6-7-may</div>
+              </div>
+            </div>
+            <div>
+              <img
+                src="./images/iconCalendar.svg"
+                class="iconTimer"
+                alt="Kalendar"
+                width="17"
+                height="17"
+              />
+              <div>
+                <p class="hero-info-text">Marafon formati:</p>
+                <div class="hero-info-title">online</div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="./images/Baxtli_kelinchak.svg"
+            class="hero-top-center-logo"
+            alt="Baxtli kelinchak"
+            width="211"
+            height="60"
+            loading="eager"
+          />
+          <p class="hero-bottom-text">
+            <b>Zamonaviy qizlar ko'pincha faqat to'yga tayyorlanadi</b> — lekin
+            Kelinlik hayotiga emas
+          </p>
+        </div>
+        <div class="hero-bottom">
+          <div class="overlayHero"></div>
+          <img
+            src="./images/speakers.png"
+            class="speakers"
+            alt="Speakerlar"
+            width="540"
+            height="320"
+            loading="lazy"
+          />
+          <button class="btn-signUp" onclick="openModal()">
+            Bepul ishtirok etish
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deferred content -->
+    <section class="team">
+      <div class="team-container">
+        <img
+          src="./images/team/marafondSiz.svg"
+          class="team-title"
+          alt="marafonsa siz"
+          width="305"
+          height="70"
+          loading="lazy"
+        />
+        <div class="team-grid">
+          <div class="card">
+            <img
+              src="./images/team/speaker1.webp"
+              alt="Speaker 1"
+              class="card-img"
+              width="149"
+              height="149"
+              loading="lazy"
+            />
+            <img
+              src="./images/team/nilufar.svg"
+              alt="Nilufar"
+              class="speakerName"
+              width="100"
+              height="25"
+              loading="lazy"
+            />
+            <p class="theme-text">1-kun mavzusi:</p>
+            <h2 class="card-title">
+              Muomola va <br />
+              murosa ilmi
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="./images/team/speaker2.webp"
+              alt="Speaker 2"
+              class="card-img"
+              width="149"
+              height="149"
+              loading="lazy"
+            />
+            <img
+              src="./images/team/muruvvat.svg"
+              alt="Muruvvat"
+              class="speakerName"
+              width="100"
+              height="25"
+              loading="lazy"
+            />
+            <p class="theme-text">2-kun mavzusi:</p>
+            <h2 class="card-title">
+              Shahsiy chegaralar <br />
+              va xurmat
+            </h2>
+          </div>
+          <div class="card">
+            <img
+              src="./images/team/speaker3.webp"
+              alt="Speaker 3"
+              class="card-img"
+              width="149"
+              height="149"
+              loading="lazy"
+            />
+            <img
+              src="./images/team/mavluda.svg"
+              alt="Mavluda"
+              class="speakerName"
+              width="100"
+              height="25"
+              loading="lazy"
+            />
+            <p class="theme-text">3-kun mavzusi:</p>
+            <h2 class="card-title">
+              Muommoli va <br />
+              ziddiyatli vaziyatlar <br />
+              yechimlari
+            </h2>
+          </div>
+        </div>
+        <button class="btn-signUp static" onclick="openModal()">
+          Bepul ishtirok etish
+        </button>
+      </div>
+    </section>
+
+    <!-- Modal  -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 class="modal-title">Ro'yxatdan o'tish</h2>
+        <form id="register-form" novalidate>
+          <div class="input-group">
+            <input
+              type="text"
+              name="name"
+              id="nameInput"
+              autocomplete="name"
+              placeholder="Ismingiz"
+              required
+              minlength="2"
+            />  
+            <div class="error-message" id="nameError"></div>
+          </div>
+          <div class="input-group">
+            <input
+              type="tel"
+              name="phone_number"
+              placeholder="Telefon raqam"
+              autocomplete="tel"
+              id="phoneInput"
+              required
+              value="+998"
+            />
+            <div class="error-message" id="phoneError"></div>
+          </div>
+          <button class="form-sign-up-btn" type="submit">Yuborish</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Deferred JavaScript loading -->
+
+    <!-- Background image lazy loading -->
+    <script>
+      window.addEventListener("load", function () {
+        document.querySelector(".hero-container").style.backgroundImage =
+          "url(../images/bg.webp)";
+      });
+    </script>
+
+<script defer src="./js/app.js"></script>
+
+  </body>
+</html>
