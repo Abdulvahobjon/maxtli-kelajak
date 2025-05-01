@@ -103,7 +103,6 @@ document.getElementById("register-form").addEventListener("submit", function(e) 
   const formData = new FormData(form);
   
   // Telegram kanaliga yo'naltirish
-  window.location = "https://t.me/+TTQZ6PeEB-05ZTIy";
   
   // Google Apps Script'ga yuborish
   fetch(
@@ -122,6 +121,9 @@ document.getElementById("register-form").addEventListener("submit", function(e) 
   .catch((error) => {
     console.error("Error:", error);
   });
+
+  window.location = "https://t.me/+TTQZ6PeEB-05ZTIy";
+
 });
 
 // Telefon raqamda faqat raqamlarni kiritish va formatlash
@@ -171,9 +173,7 @@ function openModal() {
   }
   
   // Forma fokusini birinchi inputga qo'yish
-  setTimeout(() => {
     document.getElementById("nameInput").focus();
-  }, 100);
 }
 
 // Modalni yopish
