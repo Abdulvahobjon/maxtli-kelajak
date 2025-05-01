@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baxtli Kelinchak - Online Marafon</title>
+    <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1328031434945735');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1328031434945735&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
     <meta
       name="description"
       content="Zamonaviy qizlar uchun online marafon - kelinlik hayotiga tayyorlanish"
@@ -14,9 +31,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
-      html{
-        scroll-behavior: smooth;
       }
       body {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -132,23 +146,6 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '9259877257435272');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=9259877257435272&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
     <noscript><link rel="stylesheet" href="./css/style.css" /></noscript>
   </head>
   <body>
@@ -214,7 +211,7 @@
             height="320"
             loading="lazy"
           />
-          <button type="button" class="btn-signUp" onclick="openModal()">
+          <button class="btn-signUp" onclick="openModal()">
             Bepul ishtirok etish
           </button>
         </div>
@@ -304,9 +301,9 @@
             </h2>
           </div>
         </div>
-        <a style="text-decoration: none;" href="#" class="btn-signUp static" >
+        <button class="btn-signUp static" onclick="openModal()">
           Bepul ishtirok etish
-        </a>
+        </button>
       </div>
     </section>
 
